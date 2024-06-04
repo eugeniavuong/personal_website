@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from "react-scroll/modules"
 import { HiArrowDown } from "react-icons/hi"
 
 const HomeSection = () => {
@@ -26,8 +26,8 @@ const HomeSection = () => {
                         working towards creating software that makes health care more accessible.
                     </p>
                     <Link
-                        href="projects"
-                        className="text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"
+                        to="projects"
+                        className={"text-neutral-100 font-semibold px-6 py-3 bg-teal-600 rounded shadow hover:bg-teal-700"}
                         activeClass="active"
                         spy={true}
                         smooth={true}
@@ -39,7 +39,7 @@ const HomeSection = () => {
             </div>
             <div className="flex flex-row justify-center">
                 <Link
-                    href="about"
+                    to="about"
                     activeClass="active"
                     spy={true}
                     smooth={true}
