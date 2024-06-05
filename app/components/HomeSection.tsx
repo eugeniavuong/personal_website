@@ -10,7 +10,7 @@ const HomeSection = () => {
             <div className="flex flex-col text-center items-center justify-center animate-fadeIn animation-delay-2 my-10 py-16 sm:py-32 md:justify-start md:py-48 md:flex-row md:space-x-4 md:text-left">
                 <div className="md:mt-2 md:w-1/3 flex justify-center md:justify-end px-10">
                     <Image 
-                    src="/img-placeholder.png" 
+                    src="/profile-picture.jpeg" 
                     alt="profile-picture" 
                     width={300} 
                     height={300}
