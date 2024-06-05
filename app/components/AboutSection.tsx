@@ -34,18 +34,18 @@ const AboutSection = () => {
                     <br />
                     <p>
                         I am an ambitious software engineer currently working on building Java microservices to sustain business
-                        and data resiliency. I'm committed to building for good, contributing to charity projects and confronting
+                        and data resiliency. I&#39;m committed to building for good, contributing to charity projects and confronting
                         global health issues by leveraging my curiosity for technology.
                     </p>
                     <br />
                     <p>
-                        I graduated at the University of Nottingham with a Bachelor's in Biology and pursued my curiosity in
+                        I graduated at the University of Nottingham with a Bachelor&#39;s in Biology and pursued my curiosity in
                         biotechnology and working in multi-disciplinary projects which led me to study a Masters in Computer Science.
                     </p>
                     <br />
                     <p>
                         I strive to be open to new oppurtunities and the possibility of finding new interests.
-                        I'm currently working towards attaining a Yoga
+                        I&#39;m currently working towards attaining a Yoga
                         Teacher Training Certification with the hopes to start my own
                         journey into teaching yoga :)
                     </p>
