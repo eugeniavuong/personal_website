@@ -47,14 +47,13 @@ const ProjectsSection = () => {
         Projects
         <hr className="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
       </h1>
-      <div className="flex flex-col space-y-28">
+      <div className="flex flex-col space-y-28 md:m-20">
         {projects.map((project, idx) => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col animate-slideUpCubiBeizer animation-delay-2 md:flex-row md:space-x-12">
-
-                  <div className="mt-8 w-1/2">
+                <div className="flex flex-col text-center items-center justify-center animate-slideUpCubiBezier animation-delay-2 sm:text-center sm:justify-start md:text-left md:flex-row md:space-x-12 ">
+                  <div className="mt-8 w-1/2 sm:pb-8 sm:w-full md:w-1/2">
                     <Link href={project.link}>
                       <Image src="/img-placeholder.png" alt=""
                         width={250}
@@ -62,11 +61,11 @@ const ProjectsSection = () => {
                         className="rounded-xl shadow-xl hover:opacity-70"></Image>
                     </Link>
                   </div>
-                  <div className="w-1/2">
+                  <div className="w-1/2 m:w-full md:w-1/2">
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
                     <p className="text-lg mt-4 mb-6 md:text-xl text-neutral-600 dark:text-neutral-400">{project.description}</p>
                     <p className="text-lg mt-4 mb-6 md:text-xl text-neutral-600 dark:text-neutral-400">Tech stack: {project.stack}</p>
-                    <div className="flex flex-row space-x-4">
+                    <div className="flex flex-row space-x-4 sm:justify-center md:justify-start">
                       <Link href={project.github} target='_blank'>
                         <BsGithub
                           size={30}
