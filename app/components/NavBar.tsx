@@ -18,13 +18,9 @@ const NAV_ITEMS: Array<NavItem> = [
         page: "projects"
     },
     {
-        label: "My Resume",
-        page: "may resume"
-    },
-    {
         label: "Contact Me",
         page: "contace me"
-    },
+    }
 ]
 
 const NavBar = () => {
@@ -34,15 +30,18 @@ const NavBar = () => {
 
 
 
-    return (<header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-gray-900 dark:border-b dark:border-stone-500">
+    return (<header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:dark:bg-stone-900 dark:border-b dark:border-stone-500">
         <div className="justify-between md:items-center md:flex">
             <div>
                 <div className="flex items-center justify-between py-3">
-                    <div className="md:py-3 md:block">
-                        <h2 className="text-2xl font-bold">Geenie Vuong</h2>
-                    </div>
+                    <Link
+                        to="home">
+                        <div className="md:py-3 md:block">
+                            <h2 className="text-2xl font-bold">Geenie Vuong</h2>
+                        </div>
+                    </Link>
                     <div className="md:hidden">
-                        <button onClick={()=>setNavBar(!navbar)}>
+                        <button onClick={() => setNavBar(!navbar)}>
                             {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
                         </button>
                     </div>
@@ -50,43 +49,45 @@ const NavBar = () => {
 
             </div>
             <div>
-            <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? "block" : "hidden"}`}>
-                <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                    {NAV_ITEMS.map((item, idx) => {
-                        return (
-                        <Link                    
-                            key={idx}
-                            to={item.page}
-                            className={
-                            "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
-                            }
-                            activeClass="active"
-                            spy={true}
-                            smooth={true}
-                            offset={-100}
-                            duration={500}
-                            onClick={() => setNavBar(!navbar)}
-                        >{item.label}
-                        </Link>
+                <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"}`}>
+                    <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                        {NAV_ITEMS.map((item, idx) => {
+                            return (
+                                <Link
+                                    key={idx}
+                                    to={item.page}
+                                    className={
+                                        "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100 cursor-pointer"
+                                    }
+                                    activeClass="active"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-100}
+                                    duration={500}
+                                    onClick={() => setNavBar(!navbar)}
+                                >{item.label}
+                                </Link>
+                            )
+                        })}
+                        <a href="/Eugenia_Vuong_2024.pdf" download="Eugenia_Vuong.pdf">
+                            <button>My Resume</button>
+                        </a>
+                        {/* add light and dark modes */}
+                        {currentTheme === "dark" ? (
+                            <button
+                                onClick={() => setTheme("light")}
+                                className="bg-slate-100 p-2 rounded-xl">
+                                <RiSunLine size={25} color="black" />
+                            </button>
+                        ) : (
+                            <button
+                                onClick={() => setTheme("dark")}
+                                className="bg-slate-100 p-2 rounded-xl">
+                                <RiMoonFill size={25} />
+                            </button>
                         )
-                    })}
-                    {/* add light and dark modes */}
-                    {currentTheme === "dark" ? (
-                        <button
-                            onClick={() => setTheme("light")}
-                            className="bg-slate-100 p-2 rounded-xl">
-                            <RiSunLine size={25} color="black" />
-                        </button>
-                    ) : (
-                        <button
-                            onClick={() => setTheme("dark")}
-                            className="bg-slate-100 p-2 rounded-xl">
-                            <RiMoonFill size={25} />
-                        </button> 
-                    )
-                    }
-                </div>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
