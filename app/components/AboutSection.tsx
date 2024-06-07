@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const skills = [
     { skill: "Java" },
@@ -26,24 +27,21 @@ const AboutSection = () => {
                 <div className="flex flex-col space-y-10 items-stretch justify-center align-top sm:text-center md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
                 <div className="md:w-1/2">
                     <h1 className="font-bold mb-5 text-2xl">Get to know me</h1>
-                    <p>I&#39;m a Software Engineer with a background in Biology, looking to be part of {" "}
+                    <p className="text-lg mt-4 mb-6 md:text-xl">I&#39;m a Software Engineer with a background in Biology, looking to be part of {" "}
                         <span className="font-bold">{"ambitious projects "}</span>
                         to improve the
                         <span className="font-bold">{" health care industry."}</span>
                     </p>
-                    <br />
-                    <p>
+                    <p className="text-lg mt-4 mb-6 md:text-xl">
                         I am an ambitious software engineer currently working on building Java microservices to sustain business
                         and data resiliency. I&#39;m committed to building for good, contributing to charity projects and confronting
                         global health issues by leveraging my curiosity for technology.
                     </p>
-                    <br />
-                    <p>
+                    <p className="text-lg mt-4 mb-6 md:text-xl">
                         I graduated at the University of Nottingham with a Bachelor&#39;s in Biology and pursued my curiosity in
                         biotechnology and working in multi-disciplinary projects which led me to study a Masters in Computer Science.
                     </p>
-                    <br />
-                    <p>
+                    <p className="text-lg mt-4 mb-6 md:text-xl">
                         I strive to be open to new oppurtunities and the possibility of finding new interests.
                         I&#39;m currently working towards attaining a Yoga
                         Teacher Training Certification with the hopes to start my own
@@ -65,7 +63,14 @@ const AboutSection = () => {
                         })
                         }
                     </div>
-                </div>
+                    <Image
+              src="/img-placeholder.png"
+              alt=""
+              width={275}
+              height={275}
+              className="hidden mt-8 md:block md:relative md:center md:z-0"
+            />    
+            </div>
                 </div>
             </div>
         </section>
