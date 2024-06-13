@@ -15,6 +15,20 @@ export async function POST(req: NextRequest, res: NextResponse) {
         <Email name={name} email={email} message={message}/>
     );
 
+    //verify connection configuration
+    await new Promise((resolve, reject) => {
+        // verify connection configuration
+        transporter.verify(function (error, success) {
+            if (error) {
+                console.log(error);
+                reject(error);
+            } else {
+                console.log("Server is ready to take our messages");
+                resolve(success);
+            }
+        });
+    });
+
     const options = {
         from: smtpEmail,
         to: smtpEmail,
@@ -22,12 +36,18 @@ export async function POST(req: NextRequest, res: NextResponse) {
         html: emailHtml,
     };
 
-    try{
-        //send email using transporter
-        transporter.sendMail(options);
-    }catch (error) {
-            console.log("Failed to send email", error);
-        }
+    await new Promise((resolve, reject) => {
+        // send mail
+        transporter.sendMail(options, (err, info) => {
+            if (err) {
+                console.error(err);
+                reject(err);
+            } else {
+                console.log(info);
+                resolve(info);
+            }
+        });
+    });
     return new Response("OK");
 }
 

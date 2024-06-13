@@ -36,7 +36,7 @@ const Email: React.FC<Readonly<EmailProps>> = ({
             <Text className="text-[14px] leading-[24px] text-black">
               You got an email from <strong>{name}</strong>. Their email is{" "}
               {email}. The message: <br />
-              &#34{message}&#34
+              &#34;{message}&#34;
             </Text>
           </Container>
         </Body>
