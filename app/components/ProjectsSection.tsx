@@ -7,36 +7,31 @@ import SlideUp from './SlideUp';
 
 const projects = [
   {
-    name: "Project 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    image: "img-placeholder",
-    stack: "Java, Springboot, Mockito",
-    github: "https://github.com/eugeniavuong/csv_chatbot",
+    name: "BioPredX at Nanovery",
+    description: "Nanovery is a startup partly funded by Newcastle University to develop nano-robotics sensors. I joined the team working on the BioPredX ML pipeline which aims to predict biomarkers associated with prostate, kidney and liver cancer. My work focused on implementing improved features to boost the accuracy of the biomarker predictions from the pipeline.",
+    image: "/nanovery.jpeg",
+    imagelink: "https://nanovery.co.uk/",
+    stack: "Python, Docker",
+    github: "",
     link: ""
   },
   {
-    name: "Project 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    image: "img-placeholder",
-    stack: "Java, Springboot, Mockito",
-    github: "https://github.com/eugeniavuong/csv_chatbot",
-    link: ""
+    name: "CodeAid",
+    description: "CodeAid is a pro-bono initiative led by graduates at Publicis Sapient to work with NGOs on their digital business transformation journey. Choice in Hackney is a charity created by disabled people to promote a better life for disabled people. Me and my team re-built the entire website ensuring accessibility was priority as well as maintainability for the client.",
+    image: "/choice_in_hackney.png",
+    imagelink: "https://www.linkedin.com/company/codeaid-london/?originalSubdomain=uk",
+    stack: "HTML, CSS, PHP",
+    github: "",
+    link: "https://choiceinhackney.org/"
   },
   {
-    name: "Project 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    image: "img-placeholder",
-    stack: "Java, Springboot, Mockito",
-    github: "https://github.com/eugeniavuong/csv_chatbot",
-    link: ""
-  },
-  {
-    name: "Project 4",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    image: "img-placeholder",
-    stack: "Java, Springboot, Mockito",
-    github: "https://github.com/eugeniavuong/csv_chatbot",
-    link: ""
+    name: "NeuroTone Biotherpeutic",
+    description: "Building a dry-lab project based on a synthetically engineered bacterium to deliver D-beta-hydroxybutyrate to the brain as it&#39;s known to have neuroprotecting effects. Our project has been noticed and extended by the University of North Caroline - &#39;Forget-Me-Not&#39; to further understand how we can prevent the progression of Alzheimer&#39;s disease.",
+    image: "/igem.png",
+    imagelink: "https://igem.org/",
+    stack: "HTML(website), CSS(website), JavaScript(website) python(model)",
+    github: "",
+    link: "https://2020.igem.org/Team:Nottingham/Model"
   }
 ]
 
@@ -54,9 +49,9 @@ const ProjectsSection = () => {
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col text-center items-center justify-center animate-slideUpCubiBezier animation-delay-2 sm:text-center sm:justify-start md:text-left md:flex-row md:space-x-12 ">
                   <div className="mt-8 w-1/2 sm:pb-8 sm:w-full md:w-1/2">
-                    <Link href={project.link}>
-                      <Image src="/img-placeholder.png" alt=""
-                        width={250}
+                    <Link href={project.imagelink}>
+                      <Image src={project.image} alt=""
+                        width={475}
                         height={175}
                         className="rounded-xl shadow-xl hover:opacity-70"></Image>
                     </Link>

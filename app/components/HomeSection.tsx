@@ -19,7 +19,7 @@ const HomeSection = () => {
                 </div>
                 <div className="md:w-3/5 md:mt-2">
                     <h1 className='font-bold text-4xl mt-8 md:text-5xl md:mt-0'>Hi, I&#39;m Geenie!</h1>
-                    <p className="text-lg mt-4 mb-6 md:text-xl">I&#39;m a{" "}
+                    <p className="text-lg mt-4 mb-6 md:text-xl" itemID='intro'>I&#39;m a{" "}
                         <span className="font-semibold text-teal-600">
                             Software Engineer{" "}
                         </span>
