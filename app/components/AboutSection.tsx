@@ -28,8 +28,8 @@ const AboutSection = () => {
                 <div className="md:w-1/2">
                     <h1 className="font-bold mb-5 text-2xl">Get to know me</h1>
                     <p className="text-lg mt-4 mb-6 md:text-xl">
-                        I&#39;m a Software Engineer with a background in Biology, looking to be part of ambitious projects to improve the {""} 
-                        health care industry. I&#39;m committed to building for good, contributing to charity projects and confronting global health issues 
+                        I&#39;m a Software Engineer looking to be part of ambitious projects to leverage interdiciplinary minds working on one common goal.
+                        I&#39;m committed to building for good, contributing to charity projects and confronting global issues 
                         by leveraging my curiosity for technology.
                     </p>
                     <p className="text-lg mt-4 mb-6 md:text-xl">
@@ -37,7 +37,7 @@ const AboutSection = () => {
                         biotechnology and working in multi-disciplinary projects which led me to study a Masters in Computer Science.
                     </p>
                     <p className="text-lg mt-4 mb-6 md:text-xl">
-                        I strive to be open to new oppurtunities and the possibility of finding new interests.
+                        I strive to be open to new oppurtunities/hobbies with the possibility of finding new interests.
                         I&#39;m currently working towards attaining a Yoga
                         Teacher Training Certification with the hopes to start my own
                         journey into teaching yoga :)

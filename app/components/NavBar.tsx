@@ -69,7 +69,7 @@ const NavBar = () => {
                                 </Link>
                             )
                         })}
-                        <a href="/Eugenia_Vuong_2024.pdf" download="Eugenia_Vuong.pdf">
+                        <a href="/Spotify_Resume.pdf" download="Eugenia_Vuong.pdf">
                             <button>My Resume</button>
                         </a>
                         {/* add light and dark modes */}
