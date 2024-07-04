@@ -23,7 +23,7 @@ const HomeSection = () => {
                         <span className="font-semibold text-teal-600">
                             Software Engineer{" "}
                         </span>
-                        working towards creating software that makes health care more accessible.
+                        working towards creating software that will revolutionise the way we live our lives.
                     </p>
                     <Link
                         to="projects"
